@@ -1,2 +1,2 @@
 #!/bin/bash
- -lR . | egrep -c '/'
+find . -mindepth 1 -type d | wc -l
