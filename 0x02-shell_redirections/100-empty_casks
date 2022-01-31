@@ -1,2 +1,2 @@
 #!/bin/bash
-find .* size 0 |cut -f 0,6
+find . mindepth 0 -empty printf "%f\n"
