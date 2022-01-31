@@ -1,2 +1,2 @@
 #!/bin/bash
-grep |tr Ac Ze
+ls |tr Ac Ze
