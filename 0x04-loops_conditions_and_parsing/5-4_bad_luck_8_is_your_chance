@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#print
 num=0
 while [ $num -le 9 ]
 do

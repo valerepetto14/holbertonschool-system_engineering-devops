@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#print
 hora=0
 while [ $hora -le 12 ]
 do

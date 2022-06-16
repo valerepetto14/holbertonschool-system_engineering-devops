@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#print
 contador=0
 termina=9
 until [ $termina -lt $contador ]
