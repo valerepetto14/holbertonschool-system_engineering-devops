@@ -6,16 +6,19 @@ do
    case $num in
 
   4)
+    echo %num
     echo "bad luck from China"
     ((num++))
     ;;
 
   9)
+    echo $num
     echo "bad luck from Japan"
     ((num++))
     ;;
 
   17)
+    echo $num
     echo "bad luck from Italy"
     ((num++))
     ;;
