@@ -15,7 +15,7 @@ do
         echo "Buzz"
         ((num++))
     else
-        echo num
+        echo $num
         ((num++))
     fi
 done
