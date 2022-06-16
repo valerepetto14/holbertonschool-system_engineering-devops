@@ -5,5 +5,5 @@ termina=9
 until [ $termina -lt $contador ]
 do
   echo "Best School"
-  let contador=$contador+1
+  ((contador++))
 done
