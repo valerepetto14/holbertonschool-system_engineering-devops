@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+hora=0
+while [ $hora -le 12 ]
+do
+    echo "Hour: $hora"
+    minutos=1
+    while [ $minutos -le 59 ]
+    do
+        if [ $minutos -eq 59 ];then
+            echo $minutos
+            ((hora++))
+            break
+        fi
+            echo $minutos
+            ((minutos++))
+    done
+done

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+contador=0
+termina=9
+until [ $termina -lt $contador ]
+do
+  echo "Best School"
+  let contador=$contador+1
+done

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+for num in {0..100};
+do
+    if (( $num % 5 == 0 )) && (( $num % 3 == 0 ));
+    then
+        echo "FizzBuzz"
+        ((num++))
+	elif (( $num % 3 == 0 ));
+    then
+        echo "Fizz"
+        ((num++))
+    elif (( $num % 5 == 0 ));
+    then
+        echo "Buzz"
+        ((num++))
+    else
+        echo $num
+        ((num++))
+    fi
+done
