@@ -11,7 +11,8 @@ do
         echo "good luck"
         ((num++))
         continue
-    fi
-    echo "Best School"
-    ((num++))
+    else
+        echo "Best School"
+        ((num++))
+    if
 done
