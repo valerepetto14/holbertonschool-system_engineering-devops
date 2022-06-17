@@ -10,4 +10,4 @@ do
     echo "To infinity and beyond"
     sleep 2
 done
-sudo rm -r /var/run/myscript.pid
+trap "sudo rm -r /var/run/myscript.pid" SIGQUIT SIGTERM
