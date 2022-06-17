@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #script
-trap "echo The program is terminated." SIGTERM
+trap "echo I am invincible!!!" SIGTERM
 while ((1))
 do
     echo "To infinity and beyond"
