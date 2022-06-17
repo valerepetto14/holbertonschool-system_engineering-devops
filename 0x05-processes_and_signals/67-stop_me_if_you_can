@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#script
+pkill -f "$(pgrep "7-highlander")"
