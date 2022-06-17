@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #script
-touch /var/run/myscript.pid
-ps -auxf > /var/run/myscript.pid
+sudo touch /var/run/myscript.pid
+sudo ps -auxf > /var/run/myscript.pid
 trap "echo I hate the kill command" SIGTERM
 trap "echo Y U no love me?!" SIGINT
 while ((1))
