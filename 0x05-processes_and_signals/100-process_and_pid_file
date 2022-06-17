@@ -2,12 +2,11 @@
 #script
 sudo touch /var/run/myscript.pid
 sudo chmod 777 /var/run/myscript.pid
-echo $$ > /var/run/myscript.pid
-trap "echo I hate the kill command" SIGTERM
-trap "echo Y U no love me?!" SIGINT
+echo $$ >> /var/run/myscript.pid
+trap "echo I hate the kill command;sudo rm -r /var/run/myscript.pid" SIGTERM
+trap "echo Y U no love me?!; sudo rm -r /var/run/myscript.pid" SIGINT
 while ((1))
 do
     echo "To infinity and beyond"
     sleep 2
 done
-trap "sudo rm -r /var/run/myscript.pid" SIGQUIT SIGTERM
