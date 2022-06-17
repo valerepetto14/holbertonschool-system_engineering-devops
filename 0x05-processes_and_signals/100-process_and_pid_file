@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#script
+touch /var/run/myscript.pid > ps -auxf
+trap "echo I hate the kill command" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+while ((1))
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
+rm /var/run/myscript.pid
