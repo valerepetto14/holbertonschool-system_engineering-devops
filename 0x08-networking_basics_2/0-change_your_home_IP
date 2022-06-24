@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #change ip local host and facebook
-sudo cp /etc/hosts ~/hostscopy
-echo "127.0.0.2		localhost"> ~/hostscopy
-echo "8.8.8.8		facebook.com">> ~/hostscopy
-sudo cp -f ~/hostscopy /etc/hosts
+sudo cp /etc/hosts ~/hosts.copy
+echo "127.0.0.2		localhost"> ~/hosts.copy
+echo "8.8.8.8		facebook.com">> ~/hosts.copy
+sudo cp -f ~/hosts.copy /etc/hosts
