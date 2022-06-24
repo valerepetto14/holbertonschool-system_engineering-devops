@@ -3,4 +3,4 @@
 sudo cp /etc/hosts ~/hostscopy
 echo "127.0.0.2		localhost"> ~/hostscopy
 echo "8.8.8.8		facebook.com">> ~/hostscopy
-sudo cp ~/hostscopy /etc/hosts
+sudo cp -f ~/hostscopy /etc/hosts
