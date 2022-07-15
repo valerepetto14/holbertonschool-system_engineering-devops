@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#100
-sudo nc -l 98
