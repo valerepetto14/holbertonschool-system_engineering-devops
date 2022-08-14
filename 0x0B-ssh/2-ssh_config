@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
 #bash script that use ssh
+Host 54.226.169.216
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
