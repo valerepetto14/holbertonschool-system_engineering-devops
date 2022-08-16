@@ -8,4 +8,4 @@ sudo apt update
 sudo apt install nginx
 cd /var/www/html
 sudo chmod 744 index.nginx-debian.html
-echo Hello World! > index.nginx-debian.html
+echo Hello World > index.nginx-debian.html
