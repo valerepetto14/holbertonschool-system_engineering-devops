@@ -1,3 +1,7 @@
 #!/usr/bin/env /bin/bash
 #command to restart apache2
 sudo service apache2 restart
+#!/usr/bin/env bash
+# restart apache2 for fix the error
+
+sudo service apache2 restart
