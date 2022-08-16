@@ -6,6 +6,6 @@
 #You can’t use systemctl for restarting nginx
 sudo apt update
 sudo apt install nginx
-cd /var/www/html
+cd /var/www/html || exit
 sudo chmod 744 index.nginx-debian.html
 echo Hello World > index.nginx-debian.html
