@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# script que exporte un archivo backup de nuestra base de datos (DUMP)
+
+sudo mysqldump -uroot -p"$1" --all-databases | sudo tee backup.sql
+tar -cvzf "$(date '+%d-%m-%Y').tar.gz" backup.sql
