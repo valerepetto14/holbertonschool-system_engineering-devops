@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#ejecuta whoami con el usuario deseado
+su $1 -s /bin/bash -c whoami
