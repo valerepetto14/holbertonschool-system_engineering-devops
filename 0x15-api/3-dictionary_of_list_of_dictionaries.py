@@ -17,8 +17,10 @@ if __name__ == '__main__':
         """defino variables a usar"""
         dic_final = {}
         with open(name_file, 'w', encoding='utf-8') as f:
+            """recorro los usuarios"""
             for user in users.json():
                 lista_task = []
+                """recorro las tares"""
                 for tarea in tareas.json():
                     if tarea['userId'] == user['id']:
                         """reseteo el dic para volver a llenarlo"""
