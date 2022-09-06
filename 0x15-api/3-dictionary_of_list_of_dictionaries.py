@@ -24,7 +24,7 @@ if __name__ == '__main__':
                         """reseteo el dic para volver a llenarlo"""
                         dic_tareas = {}
                         """lleno el dic con sus valores"""
-                        dic_tareas['USER_ID'] = user['id']
+                        dic_tareas['username'] = user['username']
                         dic_tareas['task'] = tarea['title']
                         dic_tareas['completed'] = tarea['completed']
                         """agrego el dic a la lista final"""
