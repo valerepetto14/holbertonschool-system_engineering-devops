@@ -7,11 +7,16 @@ import sys
 
 if __name__ == '__main__':
     id = sys.argv[1]
+
+    """urls"""
     ul = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
     ul1 = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
+
+    """hago las request"""
     data = requests.get(ul)
     todos = requests.get(ul1)
 
+    """defino variables a usar"""
     name = data.json()['name']
     titles = []
     done_tasks = 0

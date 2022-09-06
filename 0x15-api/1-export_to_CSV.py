@@ -9,10 +9,16 @@ if __name__ == '__main__':
     try:
         id = sys.argv[1]
         name_file = '{}.csv'.format(id)
+
+        """urls"""
         ul = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
         ul1 = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
+
+        """hago las request"""
         data = requests.get(ul)
         todos = requests.get(ul1)
+
+        """abro el archivo"""
         with open(name_file, 'w', encoding='utf-8') as f:
             for tarea in todos.json():
                 userid = tarea.get('userId')

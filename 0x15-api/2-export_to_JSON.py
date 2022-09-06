@@ -19,7 +19,7 @@ if __name__ == '__main__':
         username = user.json()['username']
         lista_task = []
         dic_final = {}
-    
+
         with open(name_file, 'w', encoding='utf-8') as f:
             for tarea in tareas.json():
                 """reseteo el dic para volver a llenarlo"""
