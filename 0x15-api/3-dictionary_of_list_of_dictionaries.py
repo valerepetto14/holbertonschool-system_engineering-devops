@@ -15,11 +15,11 @@ if __name__ == '__main__':
         tareas = requests.get(url1)
 
         """defino variables a usar"""
+        dic_final = {}
 
         with open(name_file, 'w', encoding='utf-8') as f:
             for user in users.json():
                 lista_task = []
-                dic_final = {}
                 for tarea in tareas.json():
                     if tarea['userId'] == user['id']:
                         """reseteo el dic para volver a llenarlo"""
@@ -31,8 +31,8 @@ if __name__ == '__main__':
                         """agrego el dic a la lista final"""
                         lista_task.append(dic_tareas)
                     """agrego la lista al value de la key id"""
-                    dic_final[user['id']] = lista_task
-                    """serealizo el diccionario y lo escribo en el documento"""
-                    f.write(json.dumps(dic_final))
+            dic_final[user['id']] = lista_task
+            """serealizo el diccionario y lo escribo en el documento"""
+            f.write(json.dumps(dic_final))
     except Exception as e:
         print(e)
