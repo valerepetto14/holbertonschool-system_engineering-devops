@@ -16,7 +16,7 @@ if __name__ == '__main__':
         with open(name_file, 'w', encoding = 'utf-8') as f:
             for tarea in tareas.json():
                 userid = tarea.get('userId')
-                name = data.json().get('name')
+                name = data.json().get('username')
                 completed = tarea.get('completed')
                 title = tarea.get('title')
                 f.write('"{}","{}","{}","{}"\n'.format(userid, name, completed, title))
