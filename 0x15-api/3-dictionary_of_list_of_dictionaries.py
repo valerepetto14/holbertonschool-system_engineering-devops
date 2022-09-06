@@ -16,7 +16,6 @@ if __name__ == '__main__':
 
         """defino variables a usar"""
         dic_final = {}
-
         with open(name_file, 'w', encoding='utf-8') as f:
             for user in users.json():
                 lista_task = []
@@ -31,7 +30,7 @@ if __name__ == '__main__':
                         """agrego el dic a la lista final"""
                         lista_task.append(dic_tareas)
                     """agrego la lista al value de la key id"""
-            dic_final[user['id']] = lista_task
+                dic_final[user['id']] = lista_task
             """serealizo el diccionario y lo escribo en el documento"""
             f.write(json.dumps(dic_final))
     except Exception as e:
