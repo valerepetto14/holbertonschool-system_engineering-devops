@@ -13,7 +13,7 @@ if __name__ == '__main__':
         ul1 = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
         user = requests.get(ul)
         tareas = requests.get(ul1)
-        name = user.json()['name']
+        name = user.json()['username']
         lista_task = []
         dic_final = {}
         with open(name_file, 'w', encoding='utf-8') as f:
