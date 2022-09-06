@@ -13,16 +13,17 @@ if __name__ == '__main__':
         data = requests.get(ul)
         todos = requests.get(ul1)
 
-        name = data.json().get('name')
+        name = data.json().['name']
+        titles = []
         done = 0
         all = 0
         for i in todos.json():
             all += 1
             if i.get('completed') is True:
                 done += 1
+                title.append(i['title'])
         print('Employee {} is done with tasks({}/{}):'.format(name, done, all))
-        for i in todos.json():
-            if i.get('completed') is True:
-                print('\t {}'.format(i.get('title')))
+        for tarea in titles:
+            print("\t {}".format(tarea))
     except Exception:
         print(Exception)
