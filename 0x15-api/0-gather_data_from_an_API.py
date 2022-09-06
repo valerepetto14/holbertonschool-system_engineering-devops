@@ -12,7 +12,7 @@ if __name__ == '__main__':
     data = requests.get(ul)
     todos = requests.get(ul1)
 
-    name = data.json().['name']
+    name = data.json()['name']
     titles = []
     done = 0
     all = 0
@@ -20,7 +20,8 @@ if __name__ == '__main__':
         all += 1
         if i.get('completed') is True:
             done += 1
-            title.append(i['title'])
+            titles.append(i['title'])
+
     print('Employee {} is done with tasks({}/{}):'.format(name, done, all))
     for tarea in titles:
         print("\t {}".format(tarea))
