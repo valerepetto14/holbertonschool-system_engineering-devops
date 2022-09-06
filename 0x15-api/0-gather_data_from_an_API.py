@@ -6,23 +6,25 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    id = sys.argv[1]
-    ul = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
-    ul1 = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
-    data = requests.get(ul)
-    todos = requests.get(ul1)
+    try:
+        id = sys.argv[1]
+        ul = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
+        ul1 = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
+        data = requests.get(ul)
+        todos = requests.get(ul1)
 
-    name = data.json()['name']
-    titles = []
-    done = 0
-    all = 0
-    for i in todos.json():
-        all += 1
-        if i.get('completed') is True:
-            done += 1
-            titles.append(i['title'])
-
-    print('Employee {} is done with tasks({}/{}):'.format(name, done, all))
-    for tarea in titles:
-        print("\t {}".format(tarea))
-
+        EMPLOYEE_NAME = data.json()['name']
+        TOTAL_NUMBER_OF_TASKS = 0
+        NUMBER_OF_DONE_TASKS = 0
+        TASK_TITLE = []
+        for i in todos.json():
+            TOTAL_NUMBER_OF_TASKS += 1
+            if i.get('completed') is True:
+                NUMBER_OF_DONE_TASKS += 1
+                TASK_TITLE.append(i['title'])
+        print('Employee {} is done with tasks({}/{}):'.format(EMPLOYEE_NAME,
+              NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
+        for tarea in TASK_TITLE:
+            print("\t {}".format(tarea))
+    except Exception:
+        print(Exception)
