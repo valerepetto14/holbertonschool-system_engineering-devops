@@ -19,7 +19,7 @@ if __name__ == '__main__':
         username = user.json()['username']
         lista_task = []
         dic_final = {}
-
+    
         with open(name_file, 'w', encoding='utf-8') as f:
             for tarea in tareas.json():
                 """reseteo el dic para volver a llenarlo"""
@@ -32,7 +32,7 @@ if __name__ == '__main__':
                 lista_task.append(dic_tareas)
             """agrego la lista al value de la key id"""
             dic_final[id] = lista_task
-            """serealizo el diccionario y lo escribo en el documento .json"""
+            """serealizo el diccionario y lo escribo en el documento"""
             f.write(json.dumps(dic_final))
     except Exception as e:
         print(e)
