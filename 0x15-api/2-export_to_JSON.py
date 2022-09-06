@@ -13,7 +13,7 @@ if __name__ == '__main__':
         ul1 = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
         user = requests.get(ul)
         tareas = requests.get(ul1)
-        name = user.json()['username']
+        username = user.json()['username']
         lista_task = []
         dic_final = {}
         with open(name_file, 'w', encoding='utf-8') as f:
@@ -21,7 +21,7 @@ if __name__ == '__main__':
                 dic_tareas = {}
                 dic_tareas['task'] = tarea['title']
                 dic_tareas['completed'] = tarea['completed']
-                dic_tareas['username'] = name
+                dic_tareas['username'] = username
                 lista_task.append(dic_tareas)
             dic_final[id] = lista_task
             f.write(json.dumps(dic_final))
