@@ -13,12 +13,13 @@ if __name__ == '__main__':
         ul1 = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
         data = requests.get(ul)
         todos = requests.get(ul1)
-        with open(name_file, 'w', encoding = 'utf-8') as f:
-            for tarea in tareas.json():
+        with open(name_file, 'w', encoding='utf-8') as f:
+            for tarea in todos.json():
                 userid = tarea.get('userId')
                 name = data.json().get('username')
                 completed = tarea.get('completed')
                 title = tarea.get('title')
-                f.write('"{}","{}","{}","{}"\n'.format(userid, name, completed, title))
+                f.write('"{}","{}","{}","{}"\n'.format(userid, name,
+                        completed, title))
     except Exception as e:
         print(e)
