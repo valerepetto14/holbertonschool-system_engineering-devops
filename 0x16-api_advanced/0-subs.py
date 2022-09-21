@@ -6,7 +6,7 @@ import requests
 def number_of_subscribers(subreddit):
     """def function that return subscripter of a subrredit"""
     try:
-        url = "http://reddit.com/r/{}/about.json".format("programming")
+        url = "http://reddit.com/r/{}/about.json".format(subreddit)
         headers = {
             "User-Agent": "My User Agent 1.0"
         }
